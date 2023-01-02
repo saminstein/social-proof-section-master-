@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: 0;
+    font-size: 15px;
+}
+
+
+img, picture, svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+:root {
+    --Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Grayish-Magenta: hsl(303, 10%, 53%);
+    --LGrayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    background-color: var(--White);
+    background-image: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg'); 
+    background-repeat: no-repeat;
+    background-position: left -45px top -25px, right 0px bottom -850px;
+    background-attachment: fixed fixed;
+    background-size: contain contain;
+    font-family: 'League Spartan';
+}
+
+
+main {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2rem;
+   margin: 40px 20px;
+}
+
+
+header {
+    text-align: center;
+    color: var(--Dark-Magenta);
+}
+
+
+h1 {
+    font-size: 28px;
+}
+
+
+p {
+    margin-top: 10px;
+    line-height: 1.3;
+    opacity: 0.8;
+}
+
+
+.second {
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    
+}
+
+
+.pinkbox {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--LGrayish-Magenta);
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+div {
+    text-align: center;
+}
+
+
+.stars {
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    margin: 6px 0;
+}
+
+
+.third {
+    margin: 0 auto;
+}
+
+
+.reviews {
+    background-color: var(--Dark-Magenta);
+    width: 300px;
+    height: 190px;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+
+figure {
+    display: flex;
+}
+
+
+figcaption {
+    display: flex;
+    flex-flow: column;
+    font-size: 13px;
+    margin: 2px 0 0 13px;
+}
+
+
+#avatar {
+    border-radius: 50%;
+}
+
+
+h3 {
+    color: var(--White); 
+}
+
+
+h4 {
+    color: var(--Soft-Pink);
+    line-height: 1.4;
+}
+
+
+.comments {
+    color: var(--White); 
+    margin: 15px 0;
+}
+
+
+@media only screen and (min-width: 800px) {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/images/bg-pattern-top-desktop.svg'), url('/images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: left 0px top 0px, right 0px bottom -250px;
+}
+ 
+ 
+main {
+    display: grid;
+    max-width: 1024px;
+    grid-template-columns: 1.3fr 0.3fr 1.4fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "headings . ratings"
+    "reviews reviews reviews";
+}
+ 
+ 
+header {
+    grid-area: headings;
+    text-align: left;
+    padding-left: 15px;   
+}
+
+
+h1 {
+    font-size: 30px;
+}
+
+
+p {
+    font-size: 16px;
+    margin-top: 16px;
+} 
+ 
+ 
+aside {
+    grid-area: ratings;
+} 
+
+
+.pinkbox {
+   display: flex;
+   flex-flow: row;
+   justify-content: center;
+   margin-top: 5px;
+   width: 320px;
+}
+
+
+div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+
+h2 {
+    margin-left: 7px;
+}
+
+
+ul:nth-child(2) {
+    position: relative;
+    left: 24px;
+}
+
+
+ul:nth-child(3) {
+    position: relative;
+    left: 44px;
+}
+
+
+section {
+    grid-area: reviews;
+    display: flex;
+    gap: 20px;
+}
+
+article:nth-child(2) {
+    margin-top: 15px;
+}
+
+
+article:nth-child(3) {
+    margin-top: 30px;
+}
+
+
+
+
+
+ 
+    
+}
